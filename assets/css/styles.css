@@ -53,10 +53,15 @@ body {
   cursor: pointer;
   text-transform: capitalize;
   transition: all ease-in-out .3s;
+  color: #A9092D;
 }
 .map__ui-letter:hover,
-.map__ui-all:hover {
-  background-color: #cccccc;
+.map__ui-all:hover,
+.map__ui-letter.active,
+.map__ui-all.active {
+  background-color: #A9092D;
+  color: #ffffff;
+  border: 1px #A9092D solid;
 }
 
 .map__ui-all {
