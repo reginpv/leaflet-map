@@ -4,6 +4,7 @@ const LOCATIONS = [
     name: "Guiguinto",
     center: [14.78708, 120.88335],
     marker: [14.82749, 120.88414],
+    markerPopup: "Im a popup and this is a link <a href='#'>LINK</a>",
     zoom: 13
   }, 
   {
@@ -11,6 +12,7 @@ const LOCATIONS = [
     name: "Makati",
     center: [14.53424, 121.02156],
     marker: [14.55381, 121.01912],
+    markerPopup: "",
     zoom: 13
   },
   {
@@ -21,11 +23,19 @@ const LOCATIONS = [
   }
 ]
 
+
+/** ------------------------------------------------------------------------------*/
+
+
 // Get default
 const init = LOCATIONS.filter(loc=>loc.label=="init")[0]
 var mapOptions = {
   center: init.center,
   zoom: init.zoom
+}
+var iconOptions = {
+  iconUrl: "assets/images/temp-marker.png",
+  iconSize: [50, 50]
 }
 
 // Map init + Layer
@@ -36,8 +46,13 @@ map.addLayer(layer)
 // Create markers
 LOCATIONS.forEach(loc=>{
   if(loc.marker) {
-    let marker = L.marker(loc.marker)
+    let marker = L.marker(loc.marker, {
+      icon: L.icon(iconOptions)
+    })
     marker.addTo(map)
+    if(loc.markerPopup) {
+      marker.bindPopup(loc.markerPopup)
+    }
   }
 })
 
