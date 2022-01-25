@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Map</title>
+
+    <!-- Leaflet JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+  </head>
+  <body>
+
+    <!-- Main wrapper -->
+    <div class="map__fullscreen">
+
+      <!-- Map starts here -->
+      <div id="map"></div>
+
+      <!-- UI here -->
+      <div class="map__ui">
+
+        <div class="map__ui-controls">
+          <div class="map__ui-letters">
+            <div onclick="updateMap('a')" class="map__ui-letter">a</div>
+            <div onclick="updateMap('b')" class="map__ui-letter">b</div>
+            <div onclick="updateMap('c')" class="map__ui-letter">c</div>
+            <div onclick="updateMap('d')" class="map__ui-letter">d</div>
+            <div onclick="updateMap('e')" class="map__ui-letter">e</div>
+            <div onclick="updateMap('f')" class="map__ui-letter">f</div>
+            <div onclick="updateMap('g')" class="map__ui-letter">g</div>
+            <div onclick="updateMap('h')" class="map__ui-letter">h</div>
+            <div onclick="updateMap('i')" class="map__ui-letter">i</div>
+            <div onclick="updateMap('j')" class="map__ui-letter">j</div>
+            <div onclick="updateMap('k')" class="map__ui-letter">k</div>
+            <div onclick="updateMap('l')" class="map__ui-letter">l</div>
+            <div onclick="updateMap('m')" class="map__ui-letter">m</div>
+            <div onclick="updateMap('n')" class="map__ui-letter">n</div>
+            <div onclick="updateMap('o')" class="map__ui-letter">o</div>
+            <div onclick="updateMap('p')" class="map__ui-letter">p</div>
+            <div onclick="updateMap('q')" class="map__ui-letter">q</div>
+            <div onclick="updateMap('r')" class="map__ui-letter">r</div>
+            <div onclick="updateMap('s')" class="map__ui-letter">s</div>
+            <div onclick="updateMap('t')" class="map__ui-letter">t</div>
+            <div onclick="updateMap('u')" class="map__ui-letter">u</div>
+            <div onclick="updateMap('v')" class="map__ui-letter">v</div>
+            <div onclick="updateMap('w')" class="map__ui-letter">w</div>
+            <div onclick="updateMap('x')" class="map__ui-letter">x</div>
+            <div onclick="updateMap('y')" class="map__ui-letter">y</div>
+            <div onclick="updateMap('z')" class="map__ui-letter">z</div>
+          </div>
+          <div onclick="updateMap('all')" class="map__ui-all">All</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Custom script -->
+	  <script src="assets/js/app.js"></script>
+  </body>
+</html> 

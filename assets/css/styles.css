@@ -1,0 +1,78 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.map__fullscreen {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.map__fullscreen #map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: none;
+  top: 0;
+}
+
+.map__ui {
+  z-index: 999;
+  max-width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  margin-bottom: 60px;
+}
+
+.map__ui-controls {
+  padding: 15px;
+  display: flex;
+}
+
+.map__ui-letters {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(13, 1fr);
+  gap: 5px;
+}
+
+.map__ui-letter,
+.map__ui-all {
+  border: 1px #cccccc solid;
+  border-radius: 3px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all ease-in-out .3s;
+}
+.map__ui-letter:hover,
+.map__ui-all:hover {
+  background-color: #cccccc;
+}
+
+.map__ui-all {
+  margin-left: 5px;
+  width: 85px;
+}
+
+/** Breakpoints */
+@media only screen and (max-width: 840px) {
+  .map__ui-letters {
+    grid-template: repeat(1, 1fr) / repeat(7, 1fr);
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .map__ui-letters {
+    grid-template: repeat(1, 1fr) / repeat(4, 1fr);
+  }
+}
