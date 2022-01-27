@@ -26,8 +26,34 @@
       <!-- Map starts here -->
       <div id="map"></div>
 
+      <!-- Gradient -->
+      <div class="map__layer-gradient"></div>
+
       <!-- UI here -->
       <div class="map__ui">
+
+        <div data-details class="map__details map__hidden">
+          <div class="map__details-header">
+            <span data-details="header"></span> 
+            <span class="map__ml-10"> - </span> 
+            <a href="#" class="map__ml-10">View available jobs</a> &nbsp;
+            <img class="map__ml-10" src="assets/images/arrow-right.png" alt="arrow" height="20" width="20" />
+          </div>
+          <div class="map__details-body">
+            <div class="map__details-left">
+              <div data-details="content" class="map__details-content">Content</div>
+              <div>
+                <a data-details="link" href="#" class="map__button">Find out more</a>
+              </div>
+            </div>
+            <div class="map__details-right">
+              <div class="map__details-image">
+                <img data-details="image" src="assets/images/st-leonards.jpeg" alt="" class="map__img-fluid" />
+                
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="map__ui-controls">
           <div class="map__ui-letters">
@@ -58,7 +84,7 @@
             <div data-map="y" class="map__ui-letter">y</div>
             <div data-map="z" class="map__ui-letter">z</div>
           </div>
-          <div data-map="all" onclick="updateMap('all')" class="map__ui-all">All</div>
+          <div data-map="" class="map__ui-all">All</div>
         </div>
 
       </div>
